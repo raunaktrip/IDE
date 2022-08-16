@@ -22,7 +22,7 @@ import "ace-builds/src-noconflict/ext-language_tools";
 import io from "socket.io-client";
 import toast from "react-hot-toast";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("http://192.168.233.141:3001");
 
 function Editor() {
   const [lang, setLang] = useState("c_cpp");
@@ -146,7 +146,7 @@ function Editor() {
     if (lang === "c_cpp") _lang = "cpp";
 
     $.ajax({
-      url: "http://localhost:3001/",
+      url: "http://192.168.233.141:3001/",
 
       method: "POST",
 
